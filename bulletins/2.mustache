@@ -1,0 +1,79 @@
+<header>
+  <img src="https://kinopio-email.s3.us-east-1.amazonaws.com/logo-base.png" width="50"/>
+  <p>
+    <div class="badge info">
+      {{subject}}
+    </div>
+    <p>
+      <span class="badge secondary">
+        This bulletin is a biweekly correspondence from the creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking tool for new ideas and hard problems
+      </span>
+    </p>
+  </p>
+</header>
+
+<main>
+  <p>
+    <!-- 🛶 intro personal message: song listening to, movies, weather, view from my window, animal sightings -->
+    I'm back in Toronto and fortunately I still like snow. I've got a new mac and a very suburban winter view. Time for some good typing.
+    <img src="https://kinopio-email.us-east-1.linodeobjects.com/winter-suburb-view.jpg"/>
+  </p>
+  <p>
+    <span class="badge info">What's New</span>
+  </p>
+  <p>
+    <!-- 🛶 -->
+    I spent time on the little things that are more felt than seen. Fixed every bug reported on the <a href="https://club.kinopio.club">forum</a>, and improved the performance of moving cards by over 20%.
+  </p>
+  <p>
+    <span class="badge info">Upcoming</span>
+  </p>
+    <!-- 🛶 -->
+  <p>
+    💰 To help grow Kinopio to financial sustainability, in the next few weeks I'll be increasing the cost of upgrading your account to $5/mo, and also adding a $50/yr option. If you've already upgraded – or if you upgrade soon – you'll be grandfathered into the current price of $4/mo forever.
+  </p>
+  <p>
+    After that, I'll be looking into more ways to make spaces feel social, but not distracting. And hopefully I'll also get to adding more <a href="https://club.kinopio.club/t/yearly-planner-grid-alignment-functions/187">card alignment options</a>.
+  </p>
+
+  <p>
+    <span class="badge info">New Explore Spaces</span>
+  </p>
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <!-- TODO show updated favorite spaces, limit 20 -->
+
+  <p>
+    (*・_・)ノ⌒*
+  </p>
+  <!-- 🛶 -->
+  <p>
+    Also, if I don't see you before then, happy valentines day 🌹
+  </p>
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>
+
+<!-- 🛶 update text version -->

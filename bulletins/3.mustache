@@ -1,0 +1,76 @@
+<header>
+  <img src="https://kinopio-email.s3.us-east-1.amazonaws.com/logo-base.png" width="50"/>
+  <p>
+    <div class="badge info">
+      {{subject}}
+    </div>
+    <p>
+      <span class="badge secondary">
+        This bulletin is a biweekly correspondence from the creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking tool for new ideas and hard problems
+      </span>
+    </p>
+  </p>
+</header>
+
+<main>
+  <!-- 🛶 intro personal message: song listening to, movies, weather, view from my window, animal sightings -->
+  <p>
+    My eyes have been sore lately, so to take a break from screens I dusted off my childhood keyboard, a chunky Yamaha (PSR-510) covered in mysterious and colorful buttons, knobs, and dials. Now that I'm a lot older I kinda-sorta know what most of them do, but it's still fun to push something, hit some keys and try and figure out what changed~
+    <img src="https://kinopio-email.us-east-1.linodeobjects.com/anime-tea.gif"/>
+  </p>
+  <p>
+    <span class="badge info">What's New</span>
+  </p>
+  <p>
+    <!-- 🛶 -->
+    I updated the price of Kinopio to help make it more financially sustainable. When the increase was announced, I was surprised by how many people welcomed and supported it. Thank you supporting independent software, and also me.
+  </p>
+  <p>
+    I also added new space backgrounds, including some animated ones that are fun to play with.
+  </p>
+  <p>
+    <span class="badge info">Upcoming</span>
+  </p>
+    <!-- 🛶 -->
+  <p>
+    Most people who see Kinopio are intrigued by it – but also not enough people have seen Kinopio. I'm going to spend some time actively reaching out to people that might like it. If you know any cool writers, youtube-ers, or podcasters with small to medium-size audiences that you think I should hit up please let me know!
+  </p>
+
+  <p>
+    <span class="badge info">New Explore Spaces</span>
+  </p>
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <!-- TODO show updated favorite spaces, limit 20 -->
+
+  <p>
+    (*・_・)ノ⌒*
+  </p>
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>
+
+<!-- 🛶 update text version -->

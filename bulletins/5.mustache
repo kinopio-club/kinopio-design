@@ -1,0 +1,88 @@
+<header>
+  <img src="https://kinopio-email.s3.us-east-1.amazonaws.com/logo-base.png" width="50"/>
+  <p>
+    <div class="badge info">
+      {{subject}}
+    </div>
+    <p>
+      <span class="badge secondary">
+        This bulletin is a biweekly correspondence from the creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking tool for new ideas and hard problems
+      </span>
+    </p>
+  </p>
+</header>
+
+<main>
+  <!-- 🛶 intro personal message: song listening to, movies, weather, view from my window, animal sightings -->
+  <p>
+    Lately, I've been thinking about this small farmhouse I found in the woods, surrounded only by acres of empty fields. It's all boarded up and there are never any snow prints in the ground around it.
+  </p>
+  <p>
+    Put in some windows, set up some internet, and I could totally see myself living out here surrounded by nothing but trees and air and snow.
+  </p>
+  <p>
+    Everyone who's seen the house thinks it's haunted, and that there's something wrong with me. I'll bet you get me though?
+  </p>
+  <p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/1538310/original_7b157da1176c9fb697d5cfd3ebabe427.jpg?1514414394?bc=1"/>
+  </p>
+  <p>
+    (^ Not the actual house, but kinda looks like it)
+  </p>
+
+  <p>
+    <span class="badge info">What's New</span>
+  </p>
+  <!-- 🛶 -->
+  <p>
+    The big release this week is desktop zooming. It feels so natural, you might feel like it's been part of Kinopio from the beginning.
+  </p>
+
+  <p>
+    <span class="badge info">Upcoming</span>
+  </p>
+    <!-- 🛶 -->
+  <p>
+    I haven't gotten to writing that new blog post yet. Things do seem to come up. But here's hoping ~
+  </p>
+
+  <p>
+    <span class="badge info">New Explore Spaces</span>
+  </p>
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <!-- TODO show updated favorite spaces, limit 20 -->
+
+  <p>
+    <!-- Okay that's enough of that, -->
+    (*・_・)ノ⌒*
+  </p>
+
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>
+
+<!-- 🛶 update text version -->

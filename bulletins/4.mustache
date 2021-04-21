@@ -1,0 +1,103 @@
+<header>
+  <img src="https://kinopio-email.s3.us-east-1.amazonaws.com/logo-base.png" width="50"/>
+  <p>
+    <div class="badge info">
+      {{subject}}
+    </div>
+    <p>
+      <span class="badge secondary">
+        This bulletin is a biweekly correspondence from the creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking tool for new ideas and hard problems
+      </span>
+    </p>
+  </p>
+</header>
+
+<main>
+  <!-- 🛶 intro personal message: song listening to, movies, weather, view from my window, animal sightings -->
+  <p>
+    So I found out that I had an eye infection which was blurring my vision. Yuck, but I'm already healing up.
+  </p>
+  <p>
+    When you can't see well, you realize just how much we rely on shape, size and position to use computer interfaces.
+  </p>
+  <p>
+    TIL Having eyesight is pretty cool.
+  </p>
+  <p>
+      <img src="https://d2w9rnfcy7mm78.cloudfront.net/6861310/original_db4687974297da479bfefa315ad6bdb0.png?1586915668?bc=0"/>
+  </p>
+
+  <p>
+    <span class="badge info">What's New</span>
+  </p>
+  <!-- 🛶 -->
+  <p>
+    I added new ways to organize things in large spaces
+    <ul>
+      <li>
+        Shift-drag cards to move them straight horizontally or vertically
+      </li>
+      <li>
+        Cmd/Ctrl-Shift-A to select all cards below your cursor
+      </li>
+      <li>
+        Added more alignment options after paint selecting cards
+      </li>
+    </ul>
+  </p>
+
+  <p>
+    <span class="badge info">Upcoming</span>
+  </p>
+    <!-- 🛶 -->
+  <p>
+    Sticking to the
+    <a href="https://kinopio.club/-kinopio-roadmap-6TRE21gchHI7alHLuwzd5">Roadmap</a>, looks like I'm writing a new blog post soon (maybe something about ~inspiration?)
+  </p>
+  <p>
+    p.s. I'm still looking for relevant creators with small audiences to reach out too. If you know anyone let me know :)
+
+    <!--  After that,
+    starting work on improving kinopio on mobile, and possibly paving the way for a native iOS app -->
+  </p>
+
+  <p>
+    <span class="badge info">New Explore Spaces</span>
+  </p>
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <!-- TODO show updated favorite spaces, limit 20 -->
+
+  <p>
+    Okay that's enough of that,
+    <!-- (*・_・)ノ⌒* -->
+  </p>
+
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>
+
+<!-- 🛶 update text version -->
