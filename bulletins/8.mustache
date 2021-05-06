@@ -1,0 +1,86 @@
+<header>
+  <img src="https://kinopio-email.s3.us-east-1.amazonaws.com/logo-base.png" width="50"/>
+  <p>
+    <div class="badge info">
+      {{subject}}
+    </div>
+    <p>
+      <span class="badge secondary">
+        This bulletin is a biweekly correspondence from the creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking tool for new ideas and hard problems
+      </span>
+    </p>
+  </p>
+</header>
+
+<main>
+
+  <!-- 🛶 intro personal message: song listening to, movies, weather, view from my window, animal sightings -->
+
+  <p>This week I started reading ‘Ask Iwata’, a collection of essays by the late/former boss of Nintendo. When I think of CEOs, I picture people who really want to be charismatic visionaries who have all the answers. “Hang on to me, I will fly us to the future” </p>
+
+  <p>But Iwata comes off more like a nice dork. There’s a different, humble kind of charisma around someone who schedules time to listen to every employee and strives to understand them first.</p>
+
+  <p>
+    <img src="https://us-east-1.linodeobjects.com/kinopio-uploads/2sjGwYq_IfkpcOvtYAnzC/iu-1.jpeg"/>
+  </p>
+
+  <p>
+    <span class="badge info">What's New</span>
+  </p>
+  <!-- 🛶 -->
+  <p>
+    The big release last week was link previews. Pasting urls into cards shows you a little preview of what's on the page. I'm pretty happy with the design, it feels like a natural extension of Kinopio cards.
+  </p>
+  <p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/11757581/original_42c5b38d3b2a9ee99f749c5d6980313e.png?1619548679?bc=0"/>
+  </p>
+
+  <p>
+    <span class="badge info">Upcoming</span>
+  </p>
+    <!-- 🛶 -->
+  <p>
+    I've started working on improving Kinopio on mobile. Being designed for small screens and touch from the beginning, it's always been usable – but weird visual glitches abound. I'm fixing each one to really make sure that the <a href="https://help.kinopio.club/posts/apps/">mobile app</a> is something you can live in.
+  </p>
+
+  <p>
+    <span class="badge info">New Explore Spaces</span>
+  </p>
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <!-- TODO show updated favorite spaces, limit 20 -->
+
+  <p>
+    <!-- Okay that's enough of that, -->
+    (*・_・)ノ⌒*
+  </p>
+
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="https://github.com/kinopio-club/kinopio-meta/tree/master/bulletins">Archives</a></p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>
+
+<!-- 🛶 update text version -->
