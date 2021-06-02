@@ -1,0 +1,80 @@
+<header> <img
+src="https://kinopio-email.s3.us-east-1.amazonaws.com/logo-base.png"
+width="50"/> <p> <div class="badge info">{{subject}} </div> <p> <span
+class="badge secondary"> This bulletin is a biweekly correspondence from the
+creator of <a href="https://kinopio.club">Kinopio</a>, the visual thinking
+tool for new ideas and hard problems </span> </p> </p> </header>
+
+<main>
+
+  <!-- 🛶 intro personal message: song listening to, movies, weather, view from my window, animal sightings -->
+
+  <p>Waiting for yet another plane, to yet another location. This time, to New Jersey. Supposedly this is the last move I'll have to make in a while, but it's hard for me to believe. I've got PTSD like a rescue stray, maybe you can adopt me.</p>
+
+  <p>My dream is to spend a whole day in a dark cave nice. Cloistered away, with no obligations, moving tasks, and internet to set up.</p>
+
+  <p>Maybe I’ll pick mushrooms of the dark stone walls and just type things all day while I munch.</p>
+
+  <p>
+    <img src="https://d2w9rnfcy7mm78.cloudfront.net/291832/original_0b58d4b5617f0306892bf6165a6ce518.jpg?1413399034?bc=1"/>
+  </p>
+
+  <p>
+    <span class="badge info">What's New</span>
+  </p>
+  <!-- 🛶 -->
+  <p>
+    Card seach is pretty handy for seeing what's new and jumping around your busy spaces. Also, I explored small game-making in Kinopio with 
+    <a href="https://kinopio.club/where-in-the-world-is-carmen-sandiego--rUJTX7-o21ELFPnZxn1M0">Where in the World is Carmen Sandiego?</a>
+  </p>
+  <p>
+    <img src="https://kinopio-updates.us-east-1.linodeobjects.com/wiw3.png"/>
+  </p>
+
+  <p>
+    <span class="badge info">Upcoming</span>
+  </p>
+    <!-- 🛶 -->
+  <p>
+    Because of all the aformentioned life moving slogs, it's probably not going to be a super productive week. Up next though is improved navigation/jumping between spaces.
+  </p>
+
+  <p>
+    <span class="badge info">New Explore Spaces</span>
+  </p>
+  {{#each newExploreSpaces}}
+    <p class="space-wrap">
+      <a href="{{../../host}}/{{space.id}}">
+        <span class="user badge button-badge" style="background:{{user.color}}">
+          <img class="user-avatar" src="https://kinopio-email.us-east-1.linodeobjects.com/anon-avatar.png" />
+          {{ user.name }}
+        </span>
+        <span class="space-name">
+          {{ space.name }}
+        </span>
+      </a>
+    </p>
+  {{/each}}
+
+  <!-- TODO show updated favorite spaces, limit 20 -->
+
+  <p>
+    <!-- Okay that's enough of that, -->
+    (*・_・)ノ⌒*
+  </p>
+
+  <!-- 🛶 -->
+  <p>
+    Your bulletin pal,
+  </p>
+  <p>
+    – Pirijan, Kinopio Creator
+  </p>
+</main>
+
+<footer>
+  <p>You've received this email because you signed up for <a href="https://kinopio.club">Kinopio</a>.</p>
+  <p>Questions? Just reply to this email :)</p>
+  <p><a href="https://github.com/kinopio-club/kinopio-meta/tree/master/bulletins">Archives</a></p>
+  <p><a href="{{unsubscribeUrl}}">Unsubscribe</a></p>
+</footer>
